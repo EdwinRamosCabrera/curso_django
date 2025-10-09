@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 class Product(models.Model):
     name = models.TextField(max_length=255,verbose_name="nombre")
@@ -6,6 +7,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="precio")
     available = models.BooleanField(default=True, verbose_name="disponible")
     photo = models.ImageField(upload_to="logos", verbose_name="foto", null=True, blank=True)
+    creation_date = models.DateTimeField(default=timezone.now, verbose_name="Fecha de creación")
 
     def __str__(self):
         return self.name
