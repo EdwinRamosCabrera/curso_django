@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path('', include('products.urls')),
+    path('', include('products.urls')),  # Django carga las urls de products como principal - Django valida las urls una por una
     path('admin/', admin.site.urls),
     path('productos/', include('products.urls')),
     path('usuarios/', include('users.urls')),

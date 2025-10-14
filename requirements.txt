@@ -1,4 +1,6 @@
 Django==5.2.7
-Pillow==11.3.0
+Pillow==11.3.0 # Imagenes
 crispy-tailwind==1.0.3
 djangorestframework==3.16.1
+psycopg2-binary==2.9.11  # PostgreSQL adapter
+django-environ==0.12.0 
